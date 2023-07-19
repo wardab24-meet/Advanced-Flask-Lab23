@@ -15,7 +15,10 @@
 					<header id="header">
 						<span class="avatar"><img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="" /></span>
 
-            <h1>Description</h1>
+             <body>
+            	<h1> {{bio}}</h1>
+        	   </body>
+
             <br>
             <!-- About me button -->
             <a href="#"><button style="color:white;width:40%" >More about me</button></a>
@@ -37,20 +40,29 @@
 							<section class="thumbnails">
                 
                 <div>
-                      <a href="">
-                        <img src="static/images/thumbs/01.jpg" alt="" />
-                        <h3>Caption... blah blah blah</h3>
-                      </a>
+                  
                 
                       <a href="">
-                        <img src="url_for('static',filename='images/thumbs/02.jpg')" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <img src="{{image}}" alt="" />
+                        <h3>MMEEEEEETTTTTTTT!!!</h3>
                       </a>
                 </div>    
+                <ul>
+									{%for post in posts %}
+									<li><img src= "{{post}}"/></li>
+									{% endfor %}
+								</ul>
                 <div>
-                  <a href="">
-                        <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+
+                        <img src="https://imageio.forbes.com/blogs-images/samarmarwan/files/2018/03/MEET-Students-1200x800.jpg" alt="" />
+                        <h3>group project<3</h3>
+                        <img src="https://uploads-ssl.webflow.com/5dd64bd3a930f96c82bd137a/63024ce64d943673cb004a4c_2022.07.17%20-%20Summer%20Day%201.png" alt="" />
+                        <h3>MEET SUMMER!</h3>
+                        <img src="https://uploads-ssl.webflow.com/5dd64bd3a930f9d04abd1363/5de6d502d6d70c0ad49a060c_6.jpg" alt="" />
+                        <h3>#MEET_du</h3>
+                        <img src="https://global-uploads.webflow.com/5fe28feebcae602620061802/5fe5401840671a36cd1d47d5_5de6d5024dd1a74670173aed_1-p-1080.jpeg" alt="" />
+                        <h3>our lovely TA's</h3>
+
                       </a>
                 </div>  
 
@@ -61,15 +73,17 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<p>&copy; MEET's (fake) Instagram. No rights reserved. 
-					</footer>
+					</footer>obal-
 
-			</div>
+			</div>																											
+			<div>
+			<ul>
+				{%for post in posts: %}
+				<li>{{post}}</li>
+				{% endfor %}
+			</ul>
+		</div>
 
-		<!-- Scripts -->
-			<script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
-			<script src="static/js/jquery.poptrox.min.js"></script>
-			<script src="static/js/skel.min.js"></script>
-			<script src="static/js/main.js"></script>
 
 	</body>
 </html>
